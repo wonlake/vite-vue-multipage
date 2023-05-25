@@ -2,7 +2,6 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 import {glob} from 'glob'
-//const glob = require('glob')
 
 let pages: any = {}
 function getPages() {
