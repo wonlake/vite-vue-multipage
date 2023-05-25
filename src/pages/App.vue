@@ -1,5 +1,7 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+function goto(url: string) {
+  location.href = url
+}
 </script>
 
 <template>
@@ -11,7 +13,9 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <el-button type="success" @click="goto('test1/index.html')">test1</el-button>
+  <el-button type="success" @click="goto('test2/index.html')">test2</el-button>
+  <el-button type="success" @click="goto('test3/index.html')">test3</el-button>
 </template>
 
 <style scoped>
