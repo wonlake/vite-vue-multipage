@@ -31,6 +31,12 @@ export default defineConfig({
     port: 8080,               // 端口
     strictPort: false, // 若端口已被占用,尝试下移一格端口
     open: true,
+	proxy: {
+      "^/[\\w\\d]+/[\\w\\d]+(\\?|[\\d\\w]$)": {
+         target: "https://localhost:7028/",
+         secure: false,
+      }
+    }
   },
   build: {
     outDir: '../../wwwroot',// 指定输出路径（相对于 项目根目录)
