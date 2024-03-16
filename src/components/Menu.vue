@@ -2,7 +2,7 @@
 <template>
     <div class="top-row ps-3 navbar navbar-dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="">MultiPage</a>
+            <a class="navbar-brand" href="/">MultiPage</a>
         </div>
     </div>
 

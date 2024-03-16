@@ -1,6 +1,6 @@
 <template>
     <el-button type="success" @click="goback">GoBack</el-button>
-    <h class="good">good</h>
+    <span class="good">good</span>
 </template>
 
 <script setup lang="ts">
