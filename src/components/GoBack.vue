@@ -1,5 +1,6 @@
 <template>
     <el-button type="success" @click="goback">GoBack</el-button>
+    <h class="good">good</h>
 </template>
 
 <script setup lang="ts">
@@ -11,3 +12,10 @@ function goback() {
         location.href = props.backurl
 }
 </script>
+<style lang="scss" scoped>
+@import "@/../../src/pages/assets/base.scss";
+
+.good {
+    background-color: $bgColor;
+}
+</style>

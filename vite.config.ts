@@ -47,5 +47,12 @@ export default defineConfig({
       input: getPages(),
     },
     emptyOutDir: true,
-  }
+  },
+  //css: {
+  //  preprocessorOptions: {
+  //    scss: {
+  //      additionalData: `@import "@/../../pages/assets/base.scss";`,
+  //    },
+  //  },
+  //},
 })
