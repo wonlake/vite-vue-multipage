@@ -1,48 +1,9 @@
 
 <template>
-    <div class="top-row ps-3 navbar navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">MultiPage</a>
-        </div>
-    </div>
-
-    <input type="checkbox" title="Navigation menu" class="navbar-toggler" />
-
-    <div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
-        <nav class="flex-column">
-            <div class="nav-item px-3">
-                <a :class="win.location.pathname == '/test1/index.html' || win.location.pathname == '/' ? 'nav-link active' : 'nav-link'" href="/test1/index.html">
-                    <span class="bi" aria-hidden="true">
-                    </span> 
-                    <el-icon><Odometer/></el-icon>
-                    Test1
-                </a>
-            </div>
-
-            <div class="nav-item px-3">
-                <a :class="win.location.pathname == '/test2/index.html'? 'nav-link active' : 'nav-link'" href="/test2/index.html">
-                    <span class="bi" aria-hidden="true"></span>
-                    <el-icon><HomeFilled/></el-icon>
-                    Test2
-                </a>
-            </div>
-
-            <div class="nav-item px-3">
-                <a :class="win.location.pathname == '/test3/index.html'? 'nav-link active' : 'nav-link'" href="/test3/index.html">
-                    <span class="bi" aria-hidden="true"></span> 
-                    <el-icon><Tools/></el-icon>
-                    Test3
-                </a>
-            </div>
-        </nav>
-    </div>
+    <span>test</span>
 </template>
 
 <script setup lang="ts">
-import { HomeFilled, Odometer, Tools } from '@element-plus/icons-vue';
-import {ref} from 'vue'
-
-const win = ref(window)
 
 </script>
 
