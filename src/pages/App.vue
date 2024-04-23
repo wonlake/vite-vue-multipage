@@ -249,6 +249,7 @@ option && myChart.setOption(option);
     background-color: blue;
 }
 
+$myheight: null;
 .mytest {
     $myheight: 200px !global;
     :deep .el-input__wrapper {
