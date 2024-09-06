@@ -13,25 +13,15 @@ function test() {
 
 <template>
   <Page>
-    <h1>test1</h1>
+    <h1 class="bg-success ext-w-10">test1</h1>
     <GoBack backurl="/"></GoBack>
-    <div>
-      <CodeEditor v-model:value="code" theme="idle_fingers" lang="javascript" style="height:50vh;font-size: medium;"/>
+    <div class="container h-75">
+      <CodeEditor v-model:value="code" theme="idle_fingers" lang="javascript" class="w-100 h-100 bg-success"/>
     </div>
   </Page>
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+<style lang="scss" scoped>
+@use "../scss/base";
+
 </style>

@@ -1,13 +1,11 @@
 <template>
     <VAceEditor
-        class="edit_box"
         v-model:value="editValue"
         v-bind="attr"
         :lang="lang"
         :theme="theme"
         :readonly="readonly"
         ref="aces"
-        :class="{'border': hasBorder}"
         :options="{
         fontSize: 18,
         tabSize: 2, 
@@ -98,10 +96,11 @@
   })
   </script>
   
-  <style scoped lang="css">
+  <style scoped lang="scss">
+  @use '../pages/scss/base';
+
   .edit_box {
     width: 100%;
-    height: 100%;
   }
   
   .border {

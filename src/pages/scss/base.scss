@@ -1,0 +1,12 @@
+$bgColor: #1482a3;
+
+@for $i from 5 through 100 {
+  @if $i % 5 == 0 {
+    .ext-h-#{$i} {
+      height: #{$i* 1%};
+    }
+    .ext-w-#{$i} {
+      width: #{$i* 1%};
+    }
+  }
+}

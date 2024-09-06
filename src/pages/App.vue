@@ -1,39 +1,24 @@
 <template>
-  <div>
   <Page>
+    <div>
       <div class="btn-group">
         <a class='btn bg-primary' href="/test1/index.html">test1</a>
         <a class="btn bg-danger" href="/test2/index.html">test2</a>
-        <a class="btn bg-warning" href="/test3/index.html">test3</a>
+        <a class="btn bg-success" href="/test3/index.html">test3</a>
       </div>
-      <div style="color:red;height:100px;width:100px">
-        <i class="bi-alarm test1 test2" style="font-size: 2rem;"></i>
-        <i class="bi-gitlab" style="font-size: 2rem;"></i>
+      <div>
+        <i class="bi bi-alarm text-danger bg-secondary" style="font-size: 2rem;"></i>
+        <i class="bi bi-gitlab text-info bg-secondary" style="font-size: 2rem;"></i>
       </div>
+    </div>
 
-      <div ref="mychart" class="h-75 container border border-success">
+      <div ref="mychart" class="ext-h-70 container border border-success overflow-auto">
         <span>test111</span>
       </div>
       <div class="container-fluid border border-success">
-        <span>test111</span>
-      </div>
-      <el-row>
-        <el-col :span="1">
-          <el-row class="h-100 bg-primary" align="middle">
-            <el-col>
-              <span class="mx-2 text-nowrap bg-danger">中国</span>
-            </el-col>
-          </el-row>
-        </el-col>
-        <el-col :span=1 :offset=22>
-          <div class="d-inline-block mycolor-1">
-            ok
-          </div>
-        </el-col>
-      </el-row>
-      <el-input v-model="mytext" placeholder="test" class="mytest"></el-input>
+      <el-input v-model="mytext" placeholder="input any thing" class="text-danger"></el-input>
+    </div>
   </Page>
-  </div>
 </template>
 
 <script setup lang="ts">
@@ -47,10 +32,8 @@ const mychart = ref<HTMLDivElement>()
 onMounted(() =>
 {
   let chartDom = mychart.value
-  var myChart = echarts.init(chartDom);
-var option;
-
-option = {
+  const myChart = echarts.init(chartDom);
+  const option: any = {
   color: ['#80FFA5', '#00DDFF', '#37A2FF', '#FF0087', '#FFBF00'],
   title: {
     text: 'Gradient Stacked Area Chart'
@@ -240,28 +223,6 @@ option && myChart.setOption(option);
 </script>
 
 <style lang="scss" scoped >
-
-.mycolor-1 {
-  color: red;
-}
-
-.test1.test2{
-    background-color: blue;
-}
-
-$myheight: null;
-.mytest {
-    $myheight: 200px !global;
-    :deep .el-input__wrapper {
-      input {
-        color: white;
-        background-color: black;
-
-      } 
-    /* background-color:aqua; */
-      height: $myheight;
-    }
-    @if $myheight > 100px { width: $myheight * 2; } @else { width: 100px;}
-}
+@use '../pages/scss/base.scss';
 
 </style>

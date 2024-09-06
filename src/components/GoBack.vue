@@ -1,6 +1,5 @@
 <template>
-    <el-button type="success" @click="goback">GoBack</el-button>
-    <span class="good">good</span>
+    <el-button type="success" class="good ext-w-15" @click="goback">GoBack</el-button>
 </template>
 
 <script setup lang="ts">
@@ -13,9 +12,9 @@ function goback() {
 }
 </script>
 <style lang="scss" scoped>
-@import "@/../../src/pages/assets/base.scss";
+@use "../../src/pages/scss/base";
 
 .good {
-    background-color: $bgColor;
+    background-color: base.$bgColor;
 }
 </style>

@@ -5,6 +5,7 @@ import "bootstrap-icons/font/bootstrap-icons.css"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap"
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
+import '../pages/style.css'
 
 function init(vue:any) {
     const app = createApp(vue);
